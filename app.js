@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Use PORT from .env or default to 5000
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT ||3000;
 
 // Basic route
 app.get('/', (req, res) => {
@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-});
+app.listen(PORT, '0.0.0.0', () => {
+    console.log('Server running');
+  });
+  
